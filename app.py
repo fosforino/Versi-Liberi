@@ -82,3 +82,25 @@ elif scelta == "🎁 Sostieni lo Scrigno":
     """)
     st.button("☕ Offri un caffè simbolico (Link PayPal/Stripe)")
     st.info("Nota: Questa è una funzione dimostrativa. Inseriremo il tuo link reale tra poco!")
+
+# --- PROTEZIONE E COPYRIGHT ---
+st.markdown(
+    """
+    <script>
+    // Disabilita il tasto destro
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    
+    // Disabilita il copia (Ctrl+C)
+    document.addEventListener('keydown', e => {
+      if (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 'u')) {
+        e.preventDefault();
+      }
+    });
+    </script>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown("---")
+st.caption("© 2026 Versi Liberi - Proprietà Letteraria Riservata di Fulvio. "
+           "Le opere sono protette da timestamp digitale. Ogni abuso sarà perseguito.")
